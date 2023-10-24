@@ -1,6 +1,6 @@
 .header {
     text-align: center;
-    font-size: 100px;
+    font-size: 50px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     border: 25px solid black;
     margin-block: 12%;
@@ -16,6 +16,6 @@
 
 .list li {
     margin: 50px;
-    font-size: 150px;
+    font-size: 50px;
     font-family: Arial, Helvetica, sans-serif;
 }
