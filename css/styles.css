@@ -1,0 +1,21 @@
+.header {
+    text-align: center;
+    font-size: 100px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    border: 25px solid black;
+    margin-block: 12%;
+    margin-inline: 12%;
+}
+
+.list {
+    columns: 3;
+    list-style: none;
+    padding: 0;
+    margin: 20px;
+}
+
+.list li {
+    margin: 50px;
+    font-size: 150px;
+    font-family: Arial, Helvetica, sans-serif;
+}
