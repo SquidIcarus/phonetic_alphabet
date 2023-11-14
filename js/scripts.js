@@ -1,20 +1,28 @@
 
-window.onload = function () {
+
+// UI Logic
+
+function getAndSetWordValues() {
+    const wordInput1 = document.getElementById("wordInput1").value;
+    const wordInput2 = document.getElementById("wordInput2").value;
+    const wordInput3 = document.getElementById("wordInput3").value;
+
+    document.querySelector("span#wordResult1").innerText = wordInput1;
+    document.querySelector("span#wordResult2").innerText = wordInput2;
+    document.querySelector("span#wordResult3").innerText = wordInput3;
+
+}
+
+function setFormSubmissionEventHandler() {
     let form = document.querySelector("form");
     form.onsubmit = function (event) {
-
-        const wordInput1 = document.getElementById("wordInput1").value;
-        const wordInput2 = document.getElementById("wordInput2").value;
-        const wordInput3 = document.getElementById("wordInput3").value;
-
-        document.querySelector("span#wordResult1").innerText = wordInput1;
-        document.querySelector("span#wordResult2").innerText = wordInput2;
-        document.querySelector("span#wordResult3").innerText = wordInput3;
-
-        document.querySelector("div#results").removeAttribute("class");
         event.preventDefault();
-    };
+        getAndSetWordValues();
+        document.querySelector("div#results").removeAttribute("class");
+    }
+}
 
+function setOnMouseOverAttribute() {
     let h1TextOn = document.querySelector("h1");
     let listOn = document.querySelector("ul.list");
     h1TextOn.onmouseover = function () {
@@ -22,8 +30,10 @@ window.onload = function () {
         listOn.onmouseover = function () {
             listOn.style.color = "yellow";
         }
-    };
+    }
+}
 
+function setOnMouseOutAttribute() {
     let h1TextOut = document.querySelector("h1");
     let listOff = document.querySelector("ul.list");
     h1TextOut.onmouseout = function () {
@@ -31,9 +41,9 @@ window.onload = function () {
         listOff.onmouseout = function () {
             listOff.style.color = "black";
         }
-    };
+    }
+}
 
-};
 
 function darkMode() {
     let h1Text = document.querySelector("h1");
@@ -53,8 +63,8 @@ function darkMode() {
     let listOff = document.querySelector("ul.list");
     listOff.onmouseout = function () {
         listOff.style.color = "white";
-    };
-};
+    }
+}
 
 
 function lightMode() {
@@ -76,6 +86,12 @@ function lightMode() {
     listOff.onmouseout = function () {
         listOff.style.color = "black";
     }
-};
+}
 
-
+window.onload = function () {
+    setOnMouseOverAttribute();
+    setOnMouseOutAttribute();
+    setFormSubmissionEventHandler();
+    darkMode();
+    lightMode();
+}
