@@ -29,6 +29,7 @@ function darkMode() {
     buttonOne.style.color = "white";
     header.style.borderColor = "white";
     list.style.color = "white";
+    list.style.borderColor = "white";
     let h1TextOut = document.querySelector("h1");
     h1TextOut.onmouseout = function () {
         h1TextOut.style.color = "white";
@@ -50,6 +51,7 @@ function lightMode() {
     buttonTwo.style.color = "black";
     header.style.borderColor = "black";
     list.style.color = "black";
+    list.style.borderColor = "black";
     let h1TextOut = document.querySelector("h1");
     h1TextOut.onmouseout = function () {
         h1TextOut.style.color = "black";
