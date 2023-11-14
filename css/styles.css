@@ -3,8 +3,8 @@
     font-size: 50px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     border: 25px solid black;
-    margin-block: 12%;
-    margin-inline: 12%;
+    margin-block: 5%;
+    margin-inline: 5%;
     background-color: darkolivegreen;
 }
 
@@ -46,6 +46,10 @@
     border: 3px solid white;
 }
 
+.hidden {
+    display: none;
+}
+
 .list {
     columns: 3;
     list-style: none;
@@ -61,7 +65,7 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.favoriteWord {
+/*.favoriteWord {
     font-size: 50px;
 }
 
@@ -74,4 +78,4 @@ input {
 button {
     width: 250px;
     font-size: 25px;
-}
+} 

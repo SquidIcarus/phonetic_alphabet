@@ -13,7 +13,7 @@
         <button class="button1" onClick="darkMode()">Dark Mode</button>
         <button class="button2" onClick="lightMode()">Light Mode</button>
     </div>
-
+    <br>
     <ul class="list">
         <li>A - Alpha</li>
         <li>B - Bravo</li>
@@ -42,14 +42,24 @@
         <li>Z - Zulu</li>
         <li>9 - Niner</li>
     </ul>
-    <form id="favoriteWord" class="favoriteWord">
-        <label for="WordInput"><strong>What are your favorite phonetic alphabet words?</strong></label>
-        <input id="WordInput" type="text">
-        <br>
-        <button type="submit" class="btn">Submit one at a time</button>
+    <form class="favoriteWord">
+        <label for="wordInput1"><strong>What are your three favorite phonetic alphabet words?</strong></label>
+        <input id="wordInput1" type="text" name="wordInput1">
+        <label for="wordInput2"></label>
+        <input id="wordInput2" type="text" name="wordInput2">
+        <label for="wordInput3"></label>
+        <input id="wordInput3" type="text" name="wordInput3">
+        <button type="submit">What it is.</button>
     </form>
-    <h2>Results</h2>
-    <p id="wordResult"></p>
+    <br>
+    <div id="results" class="hidden">
+        <h2>These are your favorites...</h2>
+        <br>
+        <br>
+        <p>
+            First favorite is <strong><em><span id="wordResult1"></span></em></strong>, the second is <strong><em><span id="wordResult2"></span></em></strong> and finally, <strong><em><span id="wordResult3"></span></em></strong>
+        </p>
+    </div>
 </body>
 
 </html>

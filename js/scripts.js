@@ -1,5 +1,20 @@
 
 window.onload = function () {
+    let form = document.querySelector("form");
+    form.onsubmit = function (event) {
+
+        const wordInput1 = document.getElementById("wordInput1").value;
+        const wordInput2 = document.getElementById("wordInput2").value;
+        const wordInput3 = document.getElementById("wordInput3").value;
+
+        document.querySelector("span#wordResult1").innerText = wordInput1;
+        document.querySelector("span#wordResult2").innerText = wordInput2;
+        document.querySelector("span#wordResult3").innerText = wordInput3;
+
+        document.querySelector("div#results").removeAttribute("class");
+        event.preventDefault();
+    };
+
     let h1TextOn = document.querySelector("h1");
     let listOn = document.querySelector("ul.list");
     h1TextOn.onmouseover = function () {
@@ -17,6 +32,7 @@ window.onload = function () {
             listOff.style.color = "black";
         }
     };
+
 };
 
 function darkMode() {
