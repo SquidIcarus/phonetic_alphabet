@@ -1,18 +1,29 @@
 
 // UI Logic
-let wordArray = [];
+let words = [];
+let unList = document.createElement("ul");
+let liOne = document.createElement("li")
+let liTwo = document.createElement("li")
+let liThree = document.createElement("li")
+
 
 function getAndSetWordValues() {
     const wordInput1 = document.getElementById("wordInput1").value;
     const wordInput2 = document.getElementById("wordInput2").value;
     const wordInput3 = document.getElementById("wordInput3").value;
 
+
+
     document.querySelector("span#wordResult1").innerText = wordInput1;
     document.querySelector("span#wordResult2").innerText = wordInput2;
     document.querySelector("span#wordResult3").innerText = wordInput3;
 
-    wordArray = [wordInput1, wordInput2, wordInput3];
-
+    words = [wordInput1, wordInput2, wordInput3];
+    words.forEach(function (word) {
+        liOne.append(word[0]);
+        liTwo.append(word[1]);
+        liThree.append(word[2]);
+    });
 
 }
 
@@ -27,27 +38,31 @@ function setFormSubmissionEventHandler() {
     }
 }
 
-function setOnMouseOverAttribute() {
-    let h1TextOn = document.querySelector("h1");
-    let listOn = document.querySelector("ul.list");
+function setMouseAttributeH1() {
+    const h1TextOn = document.querySelector("h1");
     h1TextOn.onmouseover = function () {
         h1TextOn.style.color = "yellow";
-        listOn.onmouseover = function () {
-            listOn.style.color = "yellow";
-        }
+
     }
 }
 
-function setOnMouseOutAttribute() {
-    let h1TextOut = document.querySelector("h1");
-    let listOff = document.querySelector("ul.list");
-    h1TextOut.onmouseout = function () {
-        h1TextOut.style.color = "black";
-        listOff.onmouseout = function () {
-            listOff.style.color = "black";
-        }
+function setMouseAttributeList() {
+    const listOn = document.querySelector("ul.list");
+    listOn.onmouseover = function () {
+        listOn.style.color = "yellow";
     }
 }
+
+//function setOnMouseOutAttribute() {
+//    let h1TextOut = document.querySelector("h1");
+//    let listOff = document.querySelector("ul.list");
+//    h1TextOut.onmouseout = function () {
+//        h1TextOut.style.color = "black";
+//        listOff.onmouseout = function () {
+//            listOff.style.color = "black";
+//        }
+//    }
+//}
 
 
 function darkMode() {
@@ -94,8 +109,10 @@ function lightMode() {
 }
 
 window.onload = function () {
-    setOnMouseOverAttribute();
-    setOnMouseOutAttribute();
+    setMouseAttributeH1();
+    setMouseAttributeList();
+    //  setOnMouseOverAttribute();
+    //  setOnMouseOutAttribute();
     setFormSubmissionEventHandler();
     darkMode();
     lightMode();
