@@ -1,6 +1,6 @@
 
-
 // UI Logic
+let wordArray = [];
 
 function getAndSetWordValues() {
     const wordInput1 = document.getElementById("wordInput1").value;
@@ -11,7 +11,12 @@ function getAndSetWordValues() {
     document.querySelector("span#wordResult2").innerText = wordInput2;
     document.querySelector("span#wordResult3").innerText = wordInput3;
 
+    wordArray = [wordInput1, wordInput2, wordInput3];
+
+
 }
+
+
 
 function setFormSubmissionEventHandler() {
     let form = document.querySelector("form");
@@ -95,3 +100,7 @@ window.onload = function () {
     darkMode();
     lightMode();
 }
+
+
+
+
