@@ -1,10 +1,10 @@
 
-// UI Logic
-let words = [];
-let unList = document.createElement("ul");
-let liOne = document.createElement("li")
-let liTwo = document.createElement("li")
-let liThree = document.createElement("li")
+// Business Logic
+
+let favoriteWords = [];
+let para = document.createElement("p");
+let favoriteWordsString = "I created an array with your favorite words and turned them into a string using a loop. Here they are... "
+let prettyNeat = " Then I used JavaScript to insert them onto the page. Pretty neat eh?"
 
 
 function getAndSetWordValues() {
@@ -18,16 +18,19 @@ function getAndSetWordValues() {
     document.querySelector("span#wordResult2").innerText = wordInput2;
     document.querySelector("span#wordResult3").innerText = wordInput3;
 
-    words = [wordInput1, wordInput2, wordInput3];
-    words.forEach(function (word) {
-        liOne.append(word[0]);
-        liTwo.append(word[1]);
-        liThree.append(word[2]);
+    favoriteWords = [wordInput1, wordInput2, wordInput3];
+    favoriteWords.forEach(function (word) {
+        favoriteWordsString = favoriteWordsString.concat(" " + "<strong>" + word + "</strong>" + "...");
     });
+
+    para.append(favoriteWordsString + prettyNeat);
+    let p = document.getElementById("results");
+    p.after(para);
 
 }
 
 
+// UI Logic
 
 function setFormSubmissionEventHandler() {
     let form = document.querySelector("form");
