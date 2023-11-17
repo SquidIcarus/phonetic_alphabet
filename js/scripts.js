@@ -5,6 +5,8 @@ let favoriteWords = [];
 let para = document.createElement("p");
 let favoriteWordsString = "I created an array with your favorite words and turned them into a string using a loop. Here they are... "
 let prettyNeat = " Then I used JavaScript to insert them onto the page. Pretty neat eh?"
+//let bold = document.createElement("bold"); cant figure out how to make the array "word" bold...
+
 
 
 function getAndSetWordValues() {
@@ -20,7 +22,7 @@ function getAndSetWordValues() {
 
     favoriteWords = [wordInput1, wordInput2, wordInput3];
     favoriteWords.forEach(function (word) {
-        favoriteWordsString = favoriteWordsString.concat(" " + "<strong>" + word + "</strong>" + "...");
+        favoriteWordsString = favoriteWordsString.concat(" " + word + "...");
     });
 
     para.append(favoriteWordsString + prettyNeat);
